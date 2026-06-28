@@ -1,0 +1,37 @@
+{
+  "name": "@testgarden/react",
+  "version": "1.0.0",
+  "description": "React integration for Test Garden E2E Testing platform, featuring secure automatic authentication bypass.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "testgarden",
+    "testing",
+    "e2e",
+    "react",
+    "nextjs",
+    "auth"
+  ],
+  "author": "Test Garden Team",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}
