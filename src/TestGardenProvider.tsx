@@ -59,18 +59,12 @@ export function TestGardenProvider({
 
           console.log('[Test Garden React SDK] Authentication completed successfully.');
 
-          // Send the TG_READY handshake message to the parent dashboard window
-          window.parent.postMessage({
-            type: 'TG_READY',
-            token: token,
-            url: window.location.href,
-            auth_success: true
-          }, '*');
+          console.log('[Test Garden React SDK] Authentication completed successfully. Reloading page to apply cookies...');
 
           // Clean url query parameters to prevent token leaking and maintain clean UI
           const cleanUrl = new URL(window.location.href);
           cleanUrl.searchParams.delete('tg_auth_role');
-          window.history.replaceState({}, document.title, cleanUrl.pathname + cleanUrl.search);
+          window.location.replace(cleanUrl.pathname + cleanUrl.search);
         } catch (err: any) {
           console.error('[Test Garden React SDK] Auto-authentication error:', err);
           window.parent.postMessage({
