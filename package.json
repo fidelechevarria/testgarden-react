@@ -1,6 +1,6 @@
 {
   "name": "@testgarden/react",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React integration for Test Garden E2E Testing platform, featuring secure automatic authentication bypass.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
